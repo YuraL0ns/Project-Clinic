@@ -1,10 +1,14 @@
 @extends('tmp.main.default')
 @section('content')
 
-    <div>
-        @foreach ($cat->posts as $posts )
-            {{$posts->title}}
+@foreach ($categories as $c )
+    <ul>
+        @foreach ($c->posts as $post )
+            <li>
+                <a href="{{route('sait.category.list.show.news.show', [$c->cat_alias,$post->post_alias])}}">{{$post->title}}</a>
+            </li>
         @endforeach
-    </div>
+    </ul>
+@endforeach
 
 @endsection
