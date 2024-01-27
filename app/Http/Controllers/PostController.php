@@ -14,35 +14,23 @@ class PostController extends Controller
         return view('tmp.sait.page.posts.category.list', [
 
         'categories' => Category::all(),
-        
+
     ]);
     }
 
-    public function getCategoryData(Category $category) 
-    {      
+    public function getCategoryData(Category $category)
+    {
         $categories = Category::find($category);
         $categories->load('posts');
-        
-        // dd($categories->posts());
-
-        // $categories = Category::whereHas('posts', function ($q) use ($category){
-        //     $q->where('category_id', $category);
-        // })->get();
-
         return view('tmp.sait.page.posts.category.show', compact('categories'))->with('posts');
     }
 
-    public function getPostForCategory($post_alias) 
+    public function getPostForCategory($post_alias)
     {
         $posts = Post::where('post_alias', $post_alias)->get();
-        $posts->load('category');
-        
-        // return view('tmp.sait.page.posts.category.post.show', [
-        //     'posts' => Category::with('posts')->find($post)
-        // ]);
-        // dd($posts);
+        $posts->load('categories');
         dd($post_alias);
-        
+
 
     }
 }
