@@ -1,6 +1,6 @@
 @extends('tmp.main.default')
 @section('content')
 
-{{$posts->title}}
+{{$post->title}}
 
 @endsection

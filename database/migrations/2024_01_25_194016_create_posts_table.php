@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('post_alias');
             $table->text('description');
-            $table->foreignId('category_id');
+            $table->foreignIdFor('\App\Models\Category')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
