@@ -14,14 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         \App\Models\Doctor::factory(25)->create();
-        \App\Models\Category::factory()->create([
-            'cat_title' => 'Новости клиники',
-            'cat_alias' => 'clinic-news'
-        ]);
-        \App\Models\Category::factory()->create([
-            'cat_title' => 'Новости здравохранения',
-            'cat_alias' => 'news-medical'
-        ]);
 
         \App\Models\Post::factory(20)->create();
 

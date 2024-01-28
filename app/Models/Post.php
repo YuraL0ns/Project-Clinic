@@ -20,23 +20,6 @@ class Post extends Model
         'title',
         'post_alias',
         'description',
-        'category_id'
+        'post_img'
     ];
-
-
-    /**
-     * @return BelongsTo
-     */
-    public function category() : BelongsTo
-    {
-        return $this->belongsTo(Category::class, 'category_id');
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function categories() : HasMany
-    {
-        return $this->hasMany(Category::class, 'category_id');
-    }
 }

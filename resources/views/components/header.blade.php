@@ -19,7 +19,7 @@
                     <a href="#">Акции</a>
                 </li>
                 <li>
-                    <a href="{{route('sait.home.category.list')}}">Новости</a>
+                    <a href="{{route('sait.news.list')}}">Новости</a>
                 </li>
                 <li>
                     <a href="#">Контакты</a>

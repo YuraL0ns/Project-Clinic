@@ -72,7 +72,7 @@
                     <a href="#">Документация</a>
                 </li>
                 <li>
-                    <a href="#">Новости</a>
+                    <a href="{{route('sait.news.list')}}">Новости</a>
                 </li>
                 <li>
                     <a href="#">Прайс</a>

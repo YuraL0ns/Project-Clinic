@@ -11,7 +11,10 @@
 </head>
 <body>
 <x-header />
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
+<x-callback />
 <x-footer/>
 </body>
 </html>
