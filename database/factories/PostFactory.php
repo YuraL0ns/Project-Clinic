@@ -20,7 +20,7 @@ class PostFactory extends Factory
             'title' => $this->faker->word(),
             'post_alias' => $this->faker->word(),
             'description' => $this->faker->text(),
-            'category_id' => $this->faker->numberBetween(1,3),
+            'category_id' => $this->faker->numberBetween(1,2),
         ];
     }
 }
