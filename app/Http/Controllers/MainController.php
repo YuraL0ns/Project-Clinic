@@ -16,7 +16,7 @@ class MainController extends Controller
         [
             'razdels' => Razdel::all(),
             'doctors' => Doctor::get()->random(10),
-            'news' => Post::get()->sortBy('created_at')
+            'posts' => Post::get()->sortBy('created_at')
         ]);
     }
 

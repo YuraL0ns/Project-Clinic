@@ -27,14 +27,40 @@
 <div class="hr-line"></div>
     <section class="section news">
         <div class="section-header">Новости клиники</div>
+        <div class="news-grid">
+            @foreach($posts as $post)
+                <div class="post-item" id="{{$post->id}}">
+                    <a href="{{route('sait.news.info', $post->post_alias)}}">
+                        <img src="{{$post->post_img}}" alt="{{$post->title}}">
+                        <h4>{{$post->title}}</h4>
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </section>
 <div class="hr-line"></div>
-    <section class="section testimonials">
-        <div class="section-header">Отзывы о клинике</div>
-    </section>
-<div class="hr-line"></div>
+{{--    <section class="section testimonials">--}}
+{{--        <div class="section-header">Отзывы о клинике</div>--}}
+{{--    </section>--}}
+{{--<div class="hr-line"></div>--}}
     <section class="section contacts">
         <div class="section-header">Контакты</div>
+        <div class="contacts-grid">
+            <div class="contacts-text">
+
+                <a>+7 (921) 252-40-02</a>
+                <a>8 (8202) 30-20-28</a>
+                <a>01. pmk@mail.ru</a>
+                <a>г. Череповец, ул. Архангельская, 7Б</a>
+
+                <a>Пн-Пт — 8:00-20:00</a>
+                <a>Сб-Вс — 9:00-15:00</a>
+
+            </div>
+            <div class="contacts-maps">
+                <div id="mymap"></div>
+            </div>
+        </div>
     </section>
 
 </div>

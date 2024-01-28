@@ -133,6 +133,16 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
+.contacts-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacts-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
 .footer {
     background-color: var(--clr-violet);
     color: #fff;

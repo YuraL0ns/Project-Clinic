@@ -16,5 +16,12 @@
     </div>
 <x-callback />
 <x-footer/>
+
+
+<script
+    type="text/javascript"
+    charset="utf-8"
+    async
+    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae678f456a02f1511f48524e370b40c702c66a97b7bc6f989486402fbdb3719dd&amp;width=660&amp;height=400&amp;lang=ru_RU&amp;scroll=true&amp;apikey=b848418e-6c82-49a0-9218-471b64dab114&amp;id=mymap"></script>
 </body>
 </html>
