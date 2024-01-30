@@ -16,15 +16,25 @@ class MainController extends Controller
         [
             'razdels' => Razdel::all(),
             'doctors' => Doctor::get()->random(10),
-            'posts' => Post::get()->sortBy('created_at')
+            // 'posts' => Post::get()->sortBy('created_at')
         ]);
     }
 
-    // Non static Pages
-
-    public function about_page(){}
-    public function contact_page(){}
-    public function documents_page(){}
-    public function price_page(){}
-    public function worktime_page(){}
+    // Static Pages
+    public function page_abouts(){
+        return view('tmp.sait.page.abouts.view');
+    }
+    public function page_contacts(){}
+    public function page_documents(){
+        return view('tmp.sait.page.docs.view');
+    }
+    public function page_price(){
+        return view('tmp.sait.page.price.view');
+    }
+    public function page_timeToWork(){
+        return view('tmp.sait.page.timetowork.view');
+    }
+    public function page_supports(){
+        return view('tmp.sait.page.supports.view');
+    }
 }

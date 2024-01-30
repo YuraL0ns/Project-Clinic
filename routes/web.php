@@ -8,6 +8,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\DoctorController;
 
+// Обновить согласно путям и наименованиям
+
 Route::get('/', [MainController::class, 'index_page'])->name('sait.home.page');
 
 Route::prefix('news')->name('sait.news.')->group(function (){
@@ -21,6 +23,14 @@ Route::get('/services/{razdel_alias}/{alias}', [ServicesController::class, 'getS
 
 Route::get('/specialist', [DoctorController::class, 'getDoctorData'])->name('sait.doctor.list');
 Route::get('/specialist/{doctor_name}', [DoctorController::class, 'getDoctorShowData'])->name('sait.doctor.show');
+
+Route::get('support',  [MainController::class, 'page_support'])->name('sait.page.support');
+Route::get('price-for-services', [MainController::class, 'page_price'])->name('sait.page.price');
+Route::get('time-to-work', [MainController::class, 'page_tiemToWorks'])->name('sait.page.timeToWork');
+Route::get('abouts', [MainController::class, 'page_abouts'])->name('sait.page.abouts');
+Route::get('documents', [MainController::class, 'page_documents'])->name('sait.page.documents');
+
+Route::get('sales', function(){});
 
 
 

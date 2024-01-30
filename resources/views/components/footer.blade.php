@@ -52,33 +52,33 @@
             <div class="footer-links-heading">Клиника</div>
             <ul>
                 <li>
-                    <a href="#">О нас</a>
+                    <a href="{{ route('sait.page.abouts') }}">О нас</a>
                 </li>
                 <li>
-                    <a href="#">Расписание работы врачей</a>
+                    <a href="{{ route('sait.page.timeToWork') }}">Расписание работы врачей</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#">Клинический анализы</a>
                 </li>
                 <li>
                     <a href="#">Стационар</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <div class="footer-links">
             <div class="footer-links-heading">Пациентам</div>
             <ul>
                 <li>
-                    <a href="#">Документация</a>
+                    <a href="{{ route('sait.page.documents') }}">Документация</a>
                 </li>
                 <li>
                     <a href="{{route('sait.news.list')}}">Новости</a>
                 </li>
                 <li>
-                    <a href="#">Прайс</a>
+                    <a href="{{ route('sait.page.price') }}">Прайс</a>
                 </li>
                 <li>
-                    <a href="#">Помощь</a>
+                    <a href="{{ route('sait.page.support') }}">Помощь</a>
                 </li>
             </ul>
         </div>
